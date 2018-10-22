@@ -26,7 +26,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -59,7 +58,9 @@
       height: 250px;
       background: url("../img/portrait.jpg");
       border-radius: 50%;
-      border: solid 3px #d41e1e; }
+      border: solid 3px #d41e1e;
+      background-repeat: no-repeat;
+      background-size: 250px 250px; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
@@ -139,7 +140,7 @@ header {
   color: #d41e1e; }
 
 main {
-  padding: 2rem;
+  padding: 0 2rem;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
@@ -155,18 +156,21 @@ main {
 
 .about-info {
   display: grid;
-  grid-gap: 30px;
   grid-template-areas: 'bioimage bio bio';
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr); }
+  grid-template-rows: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: 3px solid #d41e1e; }
+    border: 3px solid #d41e1e;
+    grid-row-start: 1;
+    grid-row-end: 3; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    grid-row-start: 1;
+    grid-row-end: 3; }
 
 .lang-icons {
   grid-column-start: 1;

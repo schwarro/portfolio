@@ -157,7 +157,8 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas: 'bioimage bio bio';
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
@@ -166,6 +167,21 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
+
+.lang-icons {
+  grid-column-start: 1;
+  grid-column-end: 4; }
+  .lang-icons ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0; }
+    .lang-icons ul li {
+      list-style: none; }
+      .lang-icons ul li i {
+        font-size: 3rem; }
+        .lang-icons ul li i:hover {
+          color: #d41e1e;
+          transition: all 0.5s ease-out; }
 
 .projects {
   display: grid;

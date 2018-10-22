@@ -78,6 +78,7 @@ main {
   grid-template-areas:
   'bioimage bio bio';
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 
 
   .bio-image {
@@ -90,6 +91,30 @@ main {
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
+  }
+}
+
+.lang-icons {
+  grid-column-start: 1;
+  grid-column-end: 4;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+
+    li {
+      list-style: none;
+
+      i {
+        font-size: 3rem;
+        &:hover {
+          color: $secondary-color;
+          @include easeOut();
+        }
+      }
+    }
   }
 }
 
